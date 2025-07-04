@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="h-full">
+    <div class="min-h-full">
+      <!-- Navbar -->
+      <nav class="bg-gray-700">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="flex h-16 items-center justify-between">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <a href="https://zeptoapps.com/">
+                  <img
+                    class="h-8"
+                    src="https://zeptoapps.com/cdn/shop/files/Zepto-logo.png?v=1659417999&width=230"
+                    alt="Logo"
+                  />
+                </a>
+              </div>
+              <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-4">
+                  <a
+                    href="Boilerplate Nav bar.html"
+                    class="text-gray-300 rounded-md px-3 py-2 text-sm font-medium transition duration-300 ease-in-out hover:bg-gray-600 hover:text-white"
+                    >Dashboard</a
+                  >
+                  <a
+                    href="Team.html"
+                    class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium transition duration-300 ease-in-out"
+                    >Team</a
+                  >
+                  <a
+                    href="Reports.html"
+                    class="text-gray-300 rounded-md px-3 py-2 text-sm font-medium transition duration-300 ease-in-out hover:bg-gray-600 hover:text-white"
+                    >Reports</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-4 flex items-center md:ml-6">
+                <!-- Notification -->
+                <div class="relative">
+                  <button
+                    id="notification-button"
+                    type="button"
+                    class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  >
+                    <span class="sr-only">View notifications</span>
+                    <svg
+                      class="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                      />
+                    </svg>
+                  </button>
+
+                  <div
+                    id="notification-dropdown"
+                    class="hidden absolute right-0 z-10 mt-2 w-64 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-black ring-opacity-5"
+                  >
+                    <p class="px-4 py-2 text-sm text-gray-700 font-semibold">
+                      Notifications
+                    </p>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                      >🔔 New message received</a
+                    >
+                    <a
+                      href="#"
+                      class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                      >⚠️ Server warning</a
+                    >
+                    <a
+                      href="#"
+                      class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                      >✅ Task completed</a
+                    >
+                  </div>
+                </div>
+
+                <!-- Profile dropdown -->
+                <div class="relative ml-3">
+                  <div>
+                    <button
+                      id="user-menu-button"
+                      class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    >
+                      <span class="sr-only">Open user menu</span>
+                      <img
+                        class="h-8 w-8 rounded-full"
+                        src="images-1.png"
+                        alt="Profile"
+                      />
+                    </button>
+                  </div>
+                  <div
+                    id="user-dropdown"
+                    class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 hidden"
+                  >
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700"
+                      >Your Profile</a
+                    >
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700"
+                      >Settings</a
+                    >
+                    <a
+                      href="Login.html"
+                      class="block px-4 py-2 text-sm text-gray-700"
+                      >Sign out</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <main class="px-6 py-12 text-center">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">
+          Meet the <span class="text-[#0072BB]">Team</span>
+        </h1>
+
+        <!-- Team Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mt-6 mb-10">
+          <button class="px-4 py-2 rounded-full highlight">Leadership</button>
+          <button
+            class="px-4 py-2 rounded-full bg-white text-[#0072BB] border border-[#0072BB] hover:bg-[#F89320] hover:text-white transition"
+          >
+            Client Services
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-white text-[#0072BB] border border-[#0072BB] hover:bg-[#F89320] hover:text-white transition"
+          >
+            Creative
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-white text-[#0072BB] border border-[#0072BB] hover:bg-[#F89320] hover:text-white transition"
+          >
+            Development
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-white text-[#0072BB] border border-[#0072BB] hover:bg-[#F89320] hover:text-white transition"
+          >
+            Marketing
+          </button>
+          <button
+            class="px-4 py-2 rounded-full bg-white text-[#0072BB] border border-[#0072BB] hover:bg-[#F89320] hover:text-white transition"
+          >
+            All
+          </button>
+        </div>
+
+        <!-- Team Members -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-7xl mx-auto"
+        >
+          <!-- Team Card -->
+          <div class="team-card bg-white rounded-lg p-4 text-center shadow">
+            <img
+              src="01893994571 (1).JPG"
+              alt="Steve Ambuul"
+              class="mx-auto rounded-full w-32 h-32 object-cover mb-4 border-4 border-[#F89320]"
+            />
+            <h3 class="text-lg font-bold text-gray-800">Steve Ambuul</h3>
+            <p class="text-sm text-[#F89320] mt-1">Chief Revenue Officer</p>
+          </div>
+
+          <div class="team-card bg-white rounded-lg p-4 text-center shadow">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="Alden Dale"
+              class="mx-auto rounded-full w-32 h-32 object-cover mb-4 border-4 border-[#F89320]"
+            />
+            <h3 class="text-lg font-bold text-gray-800">Alden Dale</h3>
+            <p class="text-sm text-[#F89320] mt-1">Director of Solutions</p>
+          </div>
+
+          <div class="team-card bg-white rounded-lg p-4 text-center shadow">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Kaley Deneen"
+              class="mx-auto rounded-full w-32 h-32 object-cover mb-4 border-4 border-[#F89320]"
+            />
+            <h3 class="text-lg font-bold text-gray-800">Kaley Deneen</h3>
+            <p class="text-sm text-[#F89320] mt-1">Director of Strategy</p>
+          </div>
+
+          <div class="team-card bg-white rounded-lg p-4 text-center shadow">
+            <img
+              src="https://randomuser.me/api/portraits/men/45.jpg"
+              alt="Phil Dupertuis"
+              class="mx-auto rounded-full w-32 h-32 object-cover mb-4 border-4 border-[#F89320]"
+            />
+            <h3 class="text-lg font-bold text-gray-800">Phil Dupertuis</h3>
+            <p class="text-sm text-[#F89320] mt-1">
+              Director of Client Services
+            </p>
+          </div>
+
+          <div class="team-card bg-white rounded-lg p-4 text-center shadow">
+            <img
+              src="https://randomuser.me/api/portraits/men/46.jpg"
+              alt="Tony Eades"
+              class="mx-auto rounded-full w-32 h-32 object-cover mb-4 border-4 border-[#F89320]"
+            />
+            <h3 class="text-lg font-bold text-gray-800">Tony Eades</h3>
+            <p class="text-sm text-[#F89320] mt-1">Chief Evangelist</p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer
+      class="bg-gray-50 mt-12 border-t border-gray-200 text-gray-800 text-[15px]"
+    >
+      <div
+        class="max-w-7xl mx-auto py-10 px-2 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8"
+      >
+        <!-- Logo + Shopify -->
+        <div>
+          <img
+            src="https://zeptoapps.com/cdn/shop/files/Zepto-logo.png?v=1659417999&width=230"
+            alt="ZeptoApps Logo"
+            class="h-10 mb-2"
+          />
+          <div class="flex items-center gap-1 mt-2">
+            <img src="shopi.png" alt="Shopify Logo" class="h-5" />
+            <span class="text-[15px] text-gray-600">Shopify experts</span>
+          </div>
+        </div>
+
+        <!-- Shopify App Links -->
+        <div>
+          <h3 class="text-[16px] font-semibold mb-2">Shopify App</h3>
+          <ul class="space-y-1">
+            <li>
+              <a href="#" class="hover:text-indigo-600">Product Personalizer</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-indigo-600">App Documentation</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-indigo-600">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-indigo-600">Terms of Services</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-[16px] font-semibold mb-2">Quick links</h3>
+          <ul class="space-y-1">
+            <li><a href="#" class="hover:text-indigo-600">About Us</a></li>
+            <li><a href="#" class="hover:text-indigo-600">All Services</a></li>
+            <li><a href="#" class="hover:text-indigo-600">Contact Us</a></li>
+            <li><a href="#" class="hover:text-indigo-600">Career</a></li>
+          </ul>
+        </div>
+
+        <!-- Office Address -->
+        <div>
+          <h3 class="text-[16px] font-semibold mb-2">Office Address</h3>
+          <p>
+            6th floor, Plot-36, 9th Avenue, Block - D,<br />
+            Sector 15, Uttara,<br />
+            Dhaka -1230, Bangladesh.<br /><br />
+            Email:
+            <a href="mailto:contact@zeptoapps.com" class="text-indigo-600"
+              >contact@zeptoapps.com</a
+            ><br />
+            Mobile:
+            <a href="tel:+8801708136034" class="text-indigo-600"
+              >+8801708136034</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div
+        class="border-t border-gray-200 py-1 px-2 sm:px-2 lg:px-8 text-center"
+      >
+        <!-- Payment Icons Centered -->
+        <div class="flex justify-center gap-2 mb-1">
+          <img
+            src="https://img.icons8.com/ios-filled/50/000000/apple-pay.png"
+            class="h-6"
+            alt="Apple Pay"
+          />
+          <img
+            src="https://img.icons8.com/color/48/000000/mastercard-logo.png"
+            class="h-6"
+            alt="Mastercard"
+          />
+          <img
+            src="https://img.icons8.com/color/48/000000/paypal.png"
+            class="h-6"
+            alt="Paypal"
+          />
+          <img
+            src="https://img.icons8.com/color/48/000000/visa.png"
+            class="h-6"
+            alt="Visa"
+          />
+        </div>
+
+        <!-- Copyright Text Centered Below -->
+        <p class="text-[12px] text-gray-600">
+          © 2025, ZeptoApps.com. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- Toggle Script -->
+    <script src="menu_Toggle.js"></script>
+  </body>
+</html>
